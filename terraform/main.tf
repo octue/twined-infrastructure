@@ -56,6 +56,7 @@ module "octue_twined_core" {
   google_cloud_region = var.google_cloud_region
   github_organisation = var.github_organisation
   developer_service_account_names = var.developer_service_account_names
+  deletion_protection = var.deletion_protection
 }
 
 
