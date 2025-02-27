@@ -19,8 +19,8 @@ terraform {
   cloud {
     organization = "octue"
     workspaces {
-      project = "octue-sdk-python"
-      tags = ["example-service-kueue"]
+      project = "octue-twined"
+      tags = ["services"]
     }
   }
 }

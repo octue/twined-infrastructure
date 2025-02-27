@@ -1,12 +1,12 @@
 variable "google_cloud_project_id" {
   type = string
-  default = "octue-sdk-python"
+  default = "octue-twined-services"
 }
 
 
 variable "google_cloud_region" {
   type = string
-  default = "europe-west1"
+  default = "europe-west9"
 }
 
 
