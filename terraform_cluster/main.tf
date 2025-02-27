@@ -50,16 +50,6 @@ provider "kubectl" {
 }
 
 
-module "octue_twined_core" {
-  source = "git::github.com/octue/terraform-octue-twined-core.git?ref=create-initial-module"
-  google_cloud_project_id = var.google_cloud_project_id
-  google_cloud_region = var.google_cloud_region
-  github_organisation = var.github_organisation
-  developer_service_account_names = var.developer_service_account_names
-  deletion_protection = var.deletion_protection
-}
-
-
 # Get the environment name from the workspace.
 locals {
   workspace_split = split("-", terraform.workspace)
@@ -72,7 +62,7 @@ module "octue_twined_cluster" {
   google_cloud_project_id = var.google_cloud_project_id
   google_cloud_region = var.google_cloud_region
   environment = local.environment
-  storage_bucket_name = "octue-octue-sdk-python-octue-twined"
+  storage_bucket_name = var.storage_bucket_name
   cluster_queue = var.cluster_queue
   deletion_protection = var.deletion_protection
 }

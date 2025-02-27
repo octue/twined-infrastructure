@@ -24,23 +24,5 @@ variable "developer_service_account_names" {
 
 variable "deletion_protection" {
   type    = bool
-  default = true
-}
-
-
-variable "cluster_queue" {
-  type = object(
-    {
-      name                 = string
-      max_cpus              = number
-      max_memory            = string
-      max_ephemeral_storage = string
-    }
-  )
-  default = {
-    name                  = "cluster-queue"
-    max_cpus              = 100
-    max_memory            = "256Gi"
-    max_ephemeral_storage = "10Gi"
-  }
+  default = false
 }
