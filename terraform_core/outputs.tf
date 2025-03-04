@@ -1,6 +1,6 @@
-output "event_store" {
+output "event_store_id" {
   description = "The full ID of the BigQuery table acting as the Octue Twined services event store."
-  value       = module.octue_twined_core.bigquery_events_table_id
+  value       = module.octue_twined_core.event_store_id
 }
 
 
