@@ -24,9 +24,6 @@ provider "google" {
 }
 
 
-data "google_client_config" "default" {}
-
-
 module "octue_twined_core" {
   source = "git::github.com/octue/terraform-octue-twined-core.git?ref=create-initial-module"
   google_cloud_project_id = var.google_cloud_project_id
