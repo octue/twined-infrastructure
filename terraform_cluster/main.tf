@@ -61,6 +61,7 @@ module "octue_twined_cluster" {
   source = "git::github.com/octue/terraform-octue-twined-cluster.git?ref=create-initial-module"
   google_cloud_project_id = var.google_cloud_project_id
   google_cloud_region = var.google_cloud_region
+  maintainer_service_account_names = ["cortadocodes", "thclark"]
   environment = local.environment
   storage_bucket_name = var.storage_bucket_name
   cluster_queue = var.cluster_queue
