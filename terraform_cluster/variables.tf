@@ -10,12 +10,6 @@ variable "google_cloud_region" {
 }
 
 
-variable "storage_bucket_name" {
-  type = string
-  default = "octue-octue-twined-services-octue-twined"
-}
-
-
 variable "cluster_queue" {
   type = object(
     {
