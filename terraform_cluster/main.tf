@@ -14,6 +14,10 @@ terraform {
       source  = "gavinbunney/kubectl"
       version = "~>1.19"
     }
+    archive = {
+      source  = "hashicorp/archive"
+      version = "~>2.4"
+    }
   }
 
   cloud {
@@ -58,10 +62,9 @@ locals {
 
 
 module "octue_twined_cluster" {
-  source = "git::github.com/octue/terraform-octue-twined-cluster.git?ref=0.2.1"
+  source = "git::github.com/octue/terraform-octue-twined-cluster.git?ref=0.4.0"
   google_cloud_project_id = var.google_cloud_project_id
   google_cloud_region = var.google_cloud_region
-  maintainer_service_account_names = ["cortadocodes", "thclark"]
   environment = local.environment
   cluster_queue = var.cluster_queue
   deletion_protection = var.deletion_protection

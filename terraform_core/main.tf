@@ -6,6 +6,10 @@ terraform {
       source  = "hashicorp/google"
       version = "~>6.12"
     }
+    archive = {
+      source  = "hashicorp/archive"
+      version = "~>2.4"
+    }
   }
 
   cloud {
@@ -25,7 +29,7 @@ provider "google" {
 
 
 module "octue_twined_core" {
-  source = "git::github.com/octue/terraform-octue-twined-core.git?ref=0.1.2"
+  source = "git::github.com/octue/terraform-octue-twined-core.git?ref=0.2.0"
   google_cloud_project_id = var.google_cloud_project_id
   google_cloud_region = var.google_cloud_region
   github_account = var.github_account
