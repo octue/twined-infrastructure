@@ -8,3 +8,9 @@ output "storage_bucket_url" {
   description = "The `gs://` URL of the storage bucket used to store service inputs, outputs, and diagnostics."
   value = module.octue_twined_core.storage_bucket_url
 }
+
+
+output "service_registry_url" {
+  description = "The URL of the service registry."
+  value       = module.octue_twined_core.service_registry_url
+}
